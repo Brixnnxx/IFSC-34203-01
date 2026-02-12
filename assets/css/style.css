@@ -3,29 +3,42 @@ body {
   text-align: center;
 
   margin: 0;
-  padding-top: 150px;
+  padding-top: 120px;
 
-  /* Smooth gradient */
   background: linear-gradient(135deg, #ffd6e5, #ff5fa2);
   min-height: 100vh;
 }
 
-/* Title */
 h1 {
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
 }
 
-/* Link */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 12px 0;
+}
+
 a {
+  display: inline-block;
   text-decoration: none;
   color: white;
 
   background-color: #ff4f9a;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
+
+  font-weight: bold;
+  transition: all 0.2s ease;
 }
 
 a:hover {
   background-color: #e63f87;
+  transform: scale(1.05);
 }
