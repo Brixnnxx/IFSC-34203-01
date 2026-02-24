@@ -9,6 +9,7 @@ body {
 
   background: linear-gradient(135deg, #ffd6e5, #ff5fa2);
   min-height: 100vh;
+
 }
 
 h1 {
@@ -59,4 +60,10 @@ a:hover {
     0 0 12px rgba(255, 80, 160, 0.7),
     0 0 24px rgba(255, 80, 160, 0.6),
     0 8px 14px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    background: rgb(146, 210, 234);
+  }
 }
