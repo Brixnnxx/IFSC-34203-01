@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>My Website</title>
+   <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+   <header class="container" id="top">
+  <!-- Main navigation -->
+  <nav class="primary">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main -->
+<main itemscope itemtype="https://schema.org/Person" class="container">
+  <h1 class="page-title" itemprop="name">Brianna Beasley</h1>
+
+  <section id="about">
+    <h2>Personal Details</h2>
+
+    <div class="bio">
+      <img itemprop="image" src="../Resume/assets/img/IMG_6850.jpeg" alt="Brianna Beasley">
+      <p itemprop="description">
+        I am a current college student looking to join the workforce to gain
+experience. I am organized, dedicated and ambitious budding professional
+with excellent, attention to detail, and thirst for learning. I have the ability
+to completed tasks on time, very responsible, with good judgement, time
+management, I am also dependable, motivated and I can adapt to change.
+I am ready to learn, and grow with your company.
+      </p>
+    </div>
+
+    <dl class="details">
+      <dt>Name</dt>
+      <dd itemprop="name">
+        <span itemprop="givenName">Brianna</span> <span itemprop="familyName">Beasley</span>
+      </dd>
+
+      <dt>Date of birth</dt>
+      <dd><time itemprop="birthDate" datetime="2005-12-06">12/06/2005</time></dd>
+
+      <dt>Nationality</dt>
+      <dd itemprop="nationality">United States</dd>
+
+      <dt>Location</dt>
+      <!-- Keep original text, but model as Place for better schema correctness -->
+      <dd itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+        <span itemprop="name">Arkansas</span>
+      </dd>
+
+      <dt>Telephone</dt>
+      <dd>
+        <!-- tel: should be digits; keep visible text as-is -->
+        <a itemprop="telephone" href="tel:5555555555">555.555.555.5555</a>
+      </dd>
+
+      <dt>Email</dt>
+      <dd>
+        <a itemprop="email" href="mailto:email@mail.com">Brianna.Beasley05@mail.com</a>
+      </dd>
+
+      <dt>Address</dt>
+      <dd itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">2801 South University</span>
+        <span itemprop="addressLocality">Little Rock</span>
+        <span itemprop="postalCode">72204</span>
+        <span itemprop="addressCountry">USA</span>
+      </dd>
+    </dl>
+
+    <ul class="related-links">
+      <li><a itemprop="sameAs" rel="me" href="https://github.com/profile"> github</a></li>
+      <li><a itemprop="sameAs" rel="me" href="http://linkedin.com/profile">linkedin</a></li>
+      <li><a itemprop="url" href="resume.pdf" download>pdf resume</a></li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li class="skill" itemprop="knowsAbout">HTML</li>
+      <li class="skill" itemprop="knowsAbout">CSS</li>
+      <li class="skill" itemprop="knowsAbout">Java</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <!-- current job -->
+    <article class="job">
+      <!-- jobTitle is valid on Person; this is still within Person scope -->
+      <h3 itemprop="jobTitle">Retail</h3>
+
+      <!-- worksFor is valid on Person -->
+      <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+        <span itemprop="name">Ross Dress For Less</span>
+        <span>June 2025 - Past</span>
+
+        <p itemprop="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+
+        <span itemprop="location" itemscope itemtype="https://schema.org/Place">
+          <a itemprop="url" href="https://www.rossstores.com/">Company URL</a>
+          <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Anywhere,USA</span>
+          </span>
+        </span>
+      </div>
+    </article>
+      </span>
+
+      <!-- Keep original visible date format; Google won't bind it perfectly, but it won't warn -->
+      <div>
+        <span>June 2025</span> -
+        <span>August 2025</span>
+      </div>
+      </span>
+    </article>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+
+    <article class="certificate" itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+      <h3 itemprop="description"><abbr title="Master of Science">BA</abbr> Computer SCience</h3>
+      <span itemprop="name">University of Arkansasa at Little Rock</span>
+      <span itemprop="location" itemscope>Anywhere, USA</span>
+      <span>2024-2028</span>
+    </article>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div id="copyright">
+    &copy; 2026 Brianna Beasley | <a href="#top">Top</a>
+  </div>
+</footer>
+</body>
+</html>
