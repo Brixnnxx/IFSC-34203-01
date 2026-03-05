@@ -9,7 +9,6 @@ body {
 
   background: linear-gradient(135deg, #ffd6e5, #ff5fa2);
   min-height: 100vh;
-
 }
 
 h1 {
@@ -21,24 +20,25 @@ h2 {
   color: #333;
 }
 
-/* GRID LAYOUT */
+/* BUTTON LAYOUT */
 
 nav ul {
   list-style: none;
   padding: 0;
   margin: 20px auto;
-  max-width: 700px;
+  max-width: 900px;
 
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 18px;
 }
 
-/* PINK BUTTONS */
+/* BUTTON STYLE */
 
 a {
   display: block;
-  padding: 16px;
+  padding: 16px 22px;
 
   background: linear-gradient(145deg, #ff5fa2, #ff2f8f);
   color: white;
@@ -62,8 +62,17 @@ a:hover {
     0 8px 14px rgba(0,0,0,0.2);
 }
 
+/* MOBILE */
+
 @media screen and (max-width: 650px) {
+
   body {
     background: rgb(146, 210, 234);
   }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
