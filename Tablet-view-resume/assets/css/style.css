@@ -1,50 +1,26 @@
-/* CSS Custom Properties */
-
-::root{
+:root{
   --main-bg-color: #ffc0cb;
   --primary-type-color: #ffffff;
   --accent-color-1: #ff69b4;
 }
 
-
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-/* ------ Helper Classes -------*/
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap; /* 1 */
-}
-
-/* ------ Typography -------*/
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: clamp(14px, 2vw, 18px); 
 }
-
-/* ------ Fluid Images -------*/
 
 img {
   max-width: 100%;
 }
-
-/* ------ Design Time -------*/
-
 .container {
   margin: 0 auto;
+  max-width: 900px;
   background: rgba(0, 0, 0, 0.15);
+}
+
+
+.full-width {
+  grid-column: 1 / -1;
 }
 
 /* ------ Global Styles -------*/
@@ -59,17 +35,17 @@ a:link,
 a:visited {
   color: var(--primary-type-color);
 }
-
-nav {
-  padding: 1px;
-}
 nav ul {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 20px 20px 0px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px 0;
 }
+
 nav li {
   list-style-type: none;
+  flex: 1 1 120px; 
 }
 
 nav a:link, nav a:visited {
@@ -78,7 +54,6 @@ nav a:link, nav a:visited {
   border: 1px solid #000;
   text-align: center;
   text-decoration: none;
-  color: var(--primary-type-color);
   text-transform: uppercase;
   font-size: 0.75em;
   background: rgba(0, 0, 0, 0.65);
@@ -91,12 +66,11 @@ nav a:hover {
 }
 
 main {
-  padding: 1px 20px;
+  padding: clamp(10px, 3vw, 40px); 
 }
 
 main h1 {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   text-align: center;
   font-weight: 400;
@@ -112,17 +86,13 @@ main h1:after {
   position: relative;
   top: 0.77em;
 }
-main h1:before {
-  margin-right: 15px;
-}
-main h1:after {
-  margin-left: 15px;
-}
+
+main h1:before { margin-right: 15px; }
+main h1:after { margin-left: 15px; }
 
 dl {
   font-size:.8rem;
   display: grid;
-  /*shorthand*/
   grid-template: repeat(8, 50px) / 8em 1fr;
 }
 
@@ -132,6 +102,7 @@ dt {
   padding: 10px 0;
   border-bottom: 1px solid var(--accent-color-1);
 }
+
 dd {
   margin: 0;
   grid-column: 2;
@@ -142,66 +113,16 @@ dd {
 .related-links {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
   list-style: none;
   padding: 0;
 }
-.related-links .svg-inline--fa {
-  font-size: 1.8em;
-  padding-top: 7px;
-}
-
-.related-links a {
-  border: 1px solid var(--accent-color-1);
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  color: #222222;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  background: rgba(0, 0, 0, 0.65);
-  transition: background-color 0.5s ease;
-  color: #fff;
-}
-
-.related-links a:hover {
-  background: rgba(0, 0, 0, 0.95);
-}
 
 .related-links li {
-  margin-right: 20px;
+  margin: 0;
 }
-
-#skills {
-}
-#skills li {
-  list-style-type: square;
-}
-
-.job,
-.certificate {
-  border-bottom: 1px solid var(--accent-color-1);
-  padding-bottom: 20px;
-}
-
-.job *[itemprop="jobTitle"],
-.job *[itemprop="name"],
-.job *[itemprop="url"],
-.job *[itemprop="addressLocality"],
-.certificate *[itemprop="name"] {
-  display: block;
-}
-
-.job h3 {
-  margin: 20px 0 0 0;
-}
-
-footer {
-  text-align: center;
-  padding: 20px 0;
-}
-
-
-/* Reorder Source Using Grid */
+header.container,
 main.container {
   display: grid;
   grid-template-areas:
@@ -210,64 +131,58 @@ main.container {
     "education"
     "experience"
     "skills";
+background: rgba(0, 0, 0, 0.2); /* ✅ shading ONLY here */
+  padding: 20px;
+  }
+
+  header.container {
+  margin-top: 20px;
+  margin-bottom: 0; /* ✅ removes gap */
+  border-radius: 12px 12px 0 0;
 }
 
-
-
-.page-title {
-  grid-area: title;
-}
-#about {
-  grid-area: about;
-}
-#skills {
-  grid-area: skills;
-}
-#experience {
-  grid-area: experience;
-}
-#education {
-  grid-area: education;
+main.container {
+  margin-top: 0; /* ✅ removes gap */
+  margin-bottom: 20px;
+  border-radius: 0 0 12px 12px;
 }
 
-/* Media Queries */
+.page-title { grid-area: title; }
+#about { grid-area: about; }
+#skills { grid-area: skills; }
+#experience { grid-area: experience; }
+#education { grid-area: education; }
 
 @media screen and (min-width:768px){
   
- header.container{
-  max-width:900px;
+  header.container{
+    max-width:900px;
   }
- 
   main.container{
-  max-width:900px;
-  grid-template-columns: 36.5% auto;  
-  grid-template-areas:
-    "title title"
-    "about about"
-    "education experience"
-    "skills experience"
-    ;  
+    max-width:900px;
+    grid-template-columns: 36.5% auto;  
+    grid-template-areas:
+      "title title"
+      "about about"
+      "education experience"
+      "skills experience";
   } 
   
   #about{
-  display:grid;
-  gap:2em;
-  grid-template-columns: 300px 1fr auto;
-  grid-template-areas:
-    "bio details details"
-    "related related related";
-}
-.bio{
-  grid-area:bio;
-}
-.details{
-  grid-area:details;
-}
+    display:grid;
+    gap:2em;
+    grid-template-columns: 300px 1fr auto;
+    grid-template-areas:
+      "bio details details"
+      "related related related";
+  }
+
+  .bio{ grid-area:bio; }
+  .details{ grid-area:details; }
   
- .related-links{
-  grid-area:related;
-  border-bottom:1px solid #999;
-  padding-bottom:50px
-} 
-  
+  .related-links{
+    grid-area:related;
+    border-bottom:1px solid #999;
+    padding-bottom:50px;
+  } 
 }
