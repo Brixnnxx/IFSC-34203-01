@@ -180,7 +180,7 @@ main.container {
     "education"
     "skills"
     "experience";
-
+}
 .page-title {
   grid-area: title;
 }
