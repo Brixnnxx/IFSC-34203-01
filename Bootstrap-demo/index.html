@@ -21,15 +21,27 @@
 
 <body>
   <!--Nav bar-->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
-  <div class="container"> 
-    <a class="navbar-brand" href="#">Scoops & Dreams</a> 
-    <a class="navbar-brand" href="#">Menu</a> 
-  </div> 
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    
+    <a class="navbar-brand" href="#">Scoops & Dreams</a>
+
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#menu">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
   <!-- Hero Section -->
-  <div class="bg-pink py-5">
+  <div class="bg-pink py-5" id="menu">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 text-center">
@@ -45,7 +57,7 @@
 </div>
 
   <!-- Featured Flavors -->
-  <div class="bg-green py-5">
+  <div class="bg-green py-5" id="about">
   <div class="container">
     <h2 class="text-center">Featured Flavors</h2>
     <p class="text-center">Crafted with the finest ingredients and a whole lot of love</p>
@@ -118,9 +130,41 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center p-3 mt-5">
-    <p>© 2026 Scoops & Dreams | All Rights Reserved</p>
-  </footer>
+  <footer class="bg-dark text-white py-4 mt-5" id="contact">
+  <div class="container">
+    <div class="row text-center text-md-start">
+
+      <!-- Store Hours -->
+      <div class="col-md-6 mb-3">
+        <h5>Store Hours</h5>
+        <p>
+          Monday - Thursday<br>
+          11:00 AM - 8:00 PM<br><br>
+
+          Friday - Sunday<br>
+          11:00 AM - 10:00 PM
+        </p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-6 mb-3">
+        <h5>Contact Us</h5>
+        <p>
+          123 Sweet Street<br>
+          Creamville, CA 90210<br>
+          (555) 123-4567<br>
+          hello@scoopsdreams.com
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bottom line -->
+    <div class="text-center mt-3">
+      <p>© 2026 Scoops & Dreams | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
