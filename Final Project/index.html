@@ -2,58 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scoops Ice Cream</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Ice Cream Shop</title>
+  <link rel="stylesheet" href= "assets/css/style.css">
 </head>
+
 <body>
 
-  <header class="hero">
-    <h1>Scoops Homemade Ice Cream</h1>
-    <p>Delicious, handcrafted ice cream in Little Rock</p>
-    <a href="#menu" class="btn">See Flavors</a>
-  </header>
+<div class="grid-container">
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We make slow-churned ice cream using the finest ingredients. Come taste our flavors!</p>
+  <!-- NAV -->
+  <nav class="nav">
+    <h2>Scoops & Dreams</h2>
+    <div class="links">
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="menu">
+    <div>
+      <h1>Every Scoop is a Sweet Dream</h1>
+      <p>Delicious flavors made with love and a sprinkle of magic</p>
+    </div>
+
+    <img src="https://thumbs.dreamstime.com/b/colorful-ice-cream-extravaganza-assortment-flavored-scoops-fresh-fruits-exhilarating-spectacle-multiple-detail-314010343.jpg" class="responsive-img">
   </section>
 
-  <section id="menu">
-    <h2>Our Flavors</h2>
-    <div class="flavor-grid">
-      <div class="flavor-card">
-        <img src="vanilla.jpg" alt="Vanilla Ice Cream">
-        <h3>Vanilla</h3>
+  <!-- FEATURED -->
+  <section class="featured" id="about">
+    <h2>Featured Flavors</h2>
+
+    <div class="cards">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/a7/c6/f9/a7c6f9c0ec2852f1dd905142a3444ad0.jpg">
+        <h3>Strawberry Dream</h3>
+        <p>Fresh strawberries swirled with vanilla cream</p>
       </div>
-      <div class="flavor-card">
-        <img src="chocolate.jpg" alt="Chocolate Ice Cream">
-        <h3>Chocolate</h3>
+
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/a7/28/3c/a7283c446205e47ac0997b213df426a3.jpg">
+        <h3>Mint To Be</h3>
+        <p>Mint ice cream with chocolate chips</p>
       </div>
-      <div class="flavor-card">
-        <img src="strawberry.jpg" alt="Strawberry Ice Cream">
-        <h3>Strawberry</h3>
+
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/36/a8/e9/36a8e9100c0e3aef220e44dc9a372ade.jpg">
+        <h3>Cookie Crumble Bliss</h3>
+        <p>Vanilla packed with cookie crumbles</p>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>123 Main Street, Little Rock, AR</p>
-    <p>Phone: (123) 456-7890</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <!-- WHY US -->
+  <section class="why">
+    <h2>What Makes Us Special</h2>
+
+    <div class="why-grid">
+      <div>
+        <h3>Made with Love</h3>
+        <p>Handcrafted with passion and care</p>
+      </div>
+
+      <div>
+        <h3>Local Ingredients</h3>
+        <p>Fresh ingredients from local farms</p>
+      </div>
+
+      <div>
+        <h3>Family Friendly</h3>
+        <p>A welcoming space for everyone</p>
+      </div>
+
+      <div>
+        <h3>Unique Flavors</h3>
+        <p>Rotating seasonal specials</p>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2026 Scoops Ice Cream</p>
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div>
+      <h3>Store Hours</h3>
+      <p>Mon–Thu: 11am–8pm<br>Fri–Sun: 11am–10pm</p>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p>123 Sweet Street<br>Creamville, AR<br>(501) 123-4567</p>
+    </div>
+
+    <p class="bottom">© 2026 Scoops & Dreams</p>
   </footer>
+
+</div>
 
 </body>
 </html>
-
-<!--https://www.scoopshomemadeicecream.com/-->
